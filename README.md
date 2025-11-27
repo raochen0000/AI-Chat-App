@@ -2,6 +2,8 @@
 
 基于 React + TypeScript + Ant Design 构建的简易 Chat 应用，前端通过 SSE（Server-Sent Events）接收模型流式回复，支持多轮对话与中断、重试、异常提示等交互。
 
+## 整个 demo 主要通过 AI 编程（Cursor）辅助开发完成
+
 ## 目录结构
 
 ```
@@ -29,25 +31,23 @@ npm install
 ## 启动前端
 
 ```bash
-npm start
+npm run start
 ```
 
 默认在 `http://localhost:3000` 运行。
 
-## 启动 / 模拟后端 SSE
+## 启动后端 SSE
 
-项目自带一个简单的 SSE 模拟服务，方便本地开发：
+后端服务调用的是 deepseek 的 API，经验证数据不是很可靠，信息存在滞后性！
 
 ```bash
-node server/mock-sse-server.js
+node server/index.js
 ```
 
-服务默认监听 `http://localhost:8787/chat/stream`，可通过设置 `MOCK_SSE_PORT` 环境变量修改端口。
+看到终端中打印出‘后端服务运行在 http://localhost:3001’提示信息表示启动成功。
+
+服务默认监听 `http://localhost:8787/chat/stream`。
 
 > 如需对接真实模型服务，只需在 `src/services/chatService.ts` 中调整 `API_BASE_URL` 以及请求参数/解析逻辑。
 
-## 后续开发指引
-
-- 在 `useChatStream` 中扩展异常处理（网络中断、超时、服务端错误、SSE 数据格式错误等）。
-- 补充消息失败后的重试逻辑、用户手动停止流式生成等交互。
-- 根据 UI 需求继续拆分组件（如 Loading、空态、重试提醒等）。
+##
