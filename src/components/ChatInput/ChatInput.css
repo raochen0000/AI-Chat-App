@@ -1,0 +1,8 @@
+.chat-input .ant-input-textarea {
+  flex: 1;
+}
+
+.chat-input button {
+  margin-left: 4px;
+  border-radius: 16px !important;
+}

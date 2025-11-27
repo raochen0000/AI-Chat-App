@@ -1,0 +1,76 @@
+.chat-layout {
+  width: 100%;
+  min-height: 100%;
+  background: transparent;
+}
+
+.chat-layout-content {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.chat-card {
+  position: relative;
+  width: 430px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.55);
+  overflow: hidden;
+}
+
+.chat-card-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  color: #fff;
+  gap: 12px;
+}
+
+.chat-card-header-title {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 16px !important;
+  line-height: 1;
+}
+
+.chat-card-header .ant-btn {
+  color: #fff;
+}
+
+.chat-card-header .ant-btn:hover,
+.chat-card-header .ant-btn:focus {
+  color: #e0e7ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.chat-card-body {
+  height: calc(100% - 10px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  padding-bottom: 140px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.chat-card-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.1);
+}
